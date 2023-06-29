@@ -7,10 +7,10 @@ const Team = () => {
   return (
     <div className="text-white min-h-screen bg-black b">
       {/* <NavBar /> */}
-      <div className="container mx-auto py-16 bg-black">
-        <h1 className="text-6xl mb-24 text-center inter font-bold bg-black pt-24">Our Team</h1>
+      <div className="container mx-auto md:py-16 bg-black">
+        <h1 className="text-5xl md:text-6xl mb-24 text-center inter font-bold bg-black pt-24">Our Team</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 justify-center bg-black mb-32">
-        <div className="bg-zinc-900 rounded-3xl p-8 b flex flex-col items-center justify-center shadow-lg shadow-black">
+        <div className="bg-zinc-900 rounded-3xl p-8 b flex flex-col items-center justify-center shadow-lg shadow-black ml-14 mr-14 md:ml-0 md:mr-0">
             <img src={Sydney} alt="Sydney" className="rounded-lg mb-10 w-2/3" />
             <p className="font-bold text-xl mb-4 text-whit bg-zinc-900 inter">Sydney Wiredu - Co-Founder</p>
             <p className="text-sm text-white bg-zinc-900 inter">
@@ -18,7 +18,7 @@ const Team = () => {
             </p>
         </div>
 
-        <div className="bg-zinc-900 rounded-3xl p-8 b flex flex-col items-center shadow-lg shadow-black">
+        <div className="bg-zinc-900 rounded-3xl p-8 b flex flex-col items-center shadow-lg shadow-black ml-14 mr-14 md:ml-0 md:mr-0">
             <img src={Aiden} alt="Aiden" className="rounded-lg mb-4 w-1/2 mb-10" />
             <p className="font-bold text-xl mb-4 text-white bg-zinc-900 inter">Aiden Tahmazian - Co-Founder</p>
             <p className="text-sm text-white bg-zinc-900 inter">
