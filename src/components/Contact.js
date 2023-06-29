@@ -11,7 +11,7 @@ const Contact = () => {
                     <a href="mailto:development@circlez-online.com" className="text-blue-400"> development@circlez-online.com.</a>
                 </p>
             
-                <p className='ml-10 md:ml-0 mr-10 md:mr-0'> Sydney Wirdeu: <a href="mailto:sydneywiredu@circlez-online.com" className="text-blue-400"> sydneywiredu@circlez-online.com </a> </p>
+                <p className='ml-10 md:ml-0 mr-10 md:mr-0'> Sydney Wiredu: <a href="mailto:sydneywiredu@circlez-online.com" className="text-blue-400"> sydneywiredu@circlez-online.com </a> </p>
                 <p className='ml-10 md:ml-0 md:mr-0 mr-10 '> Aiden Tahmazian: <a href="mailto:atahmazian@circlez-online.com" className="text-blue-400"> atahmazian@circlez-online.com </a> </p>
 
             </div> 
