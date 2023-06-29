@@ -11,7 +11,7 @@ const Home = () => {
             <p className=" text-white text-left mt-36 text-4xl font-bold">A social media app startup harnessing the power of positive peer pressure to help young adults track and achieve goals.</p>
             <p className=" text-zinc-500 text-left text-2xl mt-5">Join our first 100 user list to get premium access to Circlez when it launches.</p>
             <div>
-                <button className="mt-10 border-2 rounded-md p-3 pl-10 pr-10 bg-blue-400 text-white border-blue-400 hover:bg-black hover:text-blue-400 font-bold inter">Get on the Mailing List</button>
+                <button className="hover:cursor-pointer mt-10 border-2 rounded-md p-3 pl-10 pr-10 bg-blue-400 text-white border-blue-400 hover:bg-black hover:text-blue-400 font-bold inter">Get on the Mailing List</button>
             </div>
         </div>
         <div className="pt-20 flex justify-center col-span-1">

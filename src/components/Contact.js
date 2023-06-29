@@ -12,7 +12,7 @@ const Contact = () => {
                 </p>
             
                 <p> Sydney Wirdeu : <a href="mailto:sydneywiredu@circlez-online.com" className="text-blue-400"> sydneywiredu@circlez-online.com </a> </p>
-                <p> Aiden Mazian : <a href="mailto:atahmazian@circlez-online.com" className="text-blue-400"> atahmazian@circlez-online.com </a> </p>
+                <p> Aiden Tahmazian : <a href="mailto:atahmazian@circlez-online.com" className="text-blue-400"> atahmazian@circlez-online.com </a> </p>
 
             </div> 
      <div className="contact-container bg-black mt-16 ">
@@ -32,9 +32,9 @@ const Contact = () => {
           </div>
           <div className="form-group flex text-sm">
             <label htmlFor="message">Message</label>
-            <textarea className="ml-5  w-screen mr-10 text-white" id="message" name="message" rows="5" required></textarea>
+            <textarea className="ml-5 w-screen mr-10 text-white" id="message" name="message" rows="5" required></textarea>
           </div>
-          <button className="mr-10 ml-20" type="submit">Send Message</button>
+          <button className="mr-10 ml-20 hover:cursor-pointer" type="submit">Send Message</button>
         </form>
       </div>
     </div>  

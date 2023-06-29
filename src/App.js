@@ -50,22 +50,22 @@ function App() {
         <div className="ml-5 md:ml-0">
           <ul className='nav-links'>
             <li>
-              <Link className="hover:text-blue-400 text-sm md:text-md mr-2 md:mr-4" to="home" smooth={true} offset={-50} duration={500}> Home </Link>
+              <Link className="hover:text-blue-400 text-sm md:text-md mr-2 md:mr-4 hover:cursor-pointer" to="home" smooth={true} offset={-50} duration={500}> Home </Link>
             </li>
             <li>
-              <Link className="hover:text-blue-400 text-sm md:text-md mr-2 md:mr-4" to="about" smooth={true} offset={-50} duration={500}> About </Link>
+              <Link className="hover:text-blue-400 text-sm md:text-md mr-2 md:mr-4 hover:cursor-pointer" to="about" smooth={true} offset={-50} duration={500}> About </Link>
             </li>
             <li>
-              <Link className="hover:text-blue-400 text-sm md:text-md mr-2 md:mr-4" to="work" smooth={true} offset={-50} duration={500}> Work </Link>
+              <Link className="hover:text-blue-400 text-sm md:text-md mr-2 md:mr-4 hover:cursor-pointer" to="work" smooth={true} offset={-50} duration={500}> Work </Link>
             </li>
             <li>
-              <Link className="hover:text-blue-400 text-sm md:text-md mr-2 md:mr-4" to="team" smooth={true} offset={-50} duration={500}> Team </Link>
+              <Link className="hover:text-blue-400 text-sm md:text-md mr-2 md:mr-4 hover:cursor-pointer" to="team" smooth={true} offset={-50} duration={500}> Team </Link>
             </li>
             <li>
-              <Link className="hover:text-blue-400 text-sm md:text-md mr-2 md:mr-4" to="contact" smooth={true} offset={-50} duration={500}> Contact </Link>
+              <Link className="hover:text-blue-400 text-sm md:text-md mr-2 md:mr-4 hover:cursor-pointer" to="contact" smooth={true} offset={-50} duration={500}> Contact </Link>
             </li>
             <li>
-              <Link className="hover:text-blue-400 text-sm md:text-md mr-2 md:mr-4" to="blog" smooth={true} offset={-50} duration={500}> Blog </Link>
+              <Link className="hover:text-blue-400 text-sm md:text-md mr-2 md:mr-4 hover:cursor-pointer" to="blog" smooth={true} offset={-50} duration={500}> Blog </Link>
             </li>
           </ul>
         </div>
