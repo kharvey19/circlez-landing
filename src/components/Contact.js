@@ -12,11 +12,11 @@ const Contact = () => {
                 </p>
             
                 <p className='ml-10 md:ml-0 mr-10 md:mr-0'> Sydney Wirdeu: <a href="mailto:sydneywiredu@circlez-online.com" className="text-blue-400"> sydneywiredu@circlez-online.com </a> </p>
-                <p className='ml-10 md:ml-0 md:mr-0 mr-10'> Aiden Tahmazian: <a href="mailto:atahmazian@circlez-online.com" className="text-blue-400"> atahmazian@circlez-online.com </a> </p>
+                <p className='ml-10 md:ml-0 md:mr-0 mr-10 '> Aiden Tahmazian: <a href="mailto:atahmazian@circlez-online.com" className="text-blue-400"> atahmazian@circlez-online.com </a> </p>
 
             </div> 
      <div className="contact-container bg-black md:mt-16 ">
-      <div className=" contact-form col-span-1">
+      <div className=" contact-form col-span-1 md:mb-20 lg:mb-0 ">
     <form>
           <div className="form-group flex ">
             <div className="ml-5 text-sm">
@@ -34,7 +34,7 @@ const Contact = () => {
             <label htmlFor="message">Message</label>
             <textarea className="ml-5 w-screen mr-10 text-white" id="message" name="message" rows="5" required></textarea>
           </div>
-          <button className="mr-10 ml-20 hover:cursor-pointer" type="submit">Send Message</button>
+          <button className="mr-10 ml-20 hover:cursor-pointer " type="submit">Send Message</button>
         </form>
       </div>
     </div>  

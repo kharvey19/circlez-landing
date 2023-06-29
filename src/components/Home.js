@@ -14,7 +14,7 @@ const Home = () => {
                 <button className="hover:cursor-pointer mt-10 border-2 rounded-md p-3 pl-10 pr-10 bg-blue-400 text-white border-blue-400 hover:bg-black hover:text-blue-400 font-bold md:inter">Get on the Mailing List</button>
             </div>
         </div>
-        <div className="md:pt-10 flex justify-center flex-col md:flex-row items-center md:col-span-1">
+        <div className="lg:pt-10 md:pb-12 lg:pb-0 flex justify-center flex-col md:flex-row items-center md:col-span-1">
         <div className='md:-mt-10 md:mr-5 mb-10 '>
         <img src={home} alt='' className="h" />
         </div>
