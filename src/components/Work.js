@@ -3,11 +3,11 @@ import goals from "../static/goals.png";
 const Work = () => {
     return ( 
         <div>
-            <div className="bg-black min-h-screen text-white grid md:grid-cols-4 b">
+            <div className="bg-black min-h-screen text-white grid lg:grid-cols-4 b">
                 
-                <h1 className="text-5xl md:text-6xl text-center md:py-10 md:col-span-4 md:inter font-bold mt-32" >Our Work</h1>
+                <h1 className="text-5xl md:text-6xl text-center w-screen md:py-10 lg:col-span-4 lg:inter font-bold mt-32" >Our Work</h1>
                     <div className="col-span-2 mb-10 md:mb-20 flex justify-center" >
-                        <img src={goals} alt='' className="md:ml-44 w-9/12 mt-8" />
+                        <img src={goals} alt='' className="lg:ml-44 w-9/12 mt-8" />
                     </div>
                     
                     <div className="md:pr-44 md:pl-44 pl-16 pr-10 md:col-span-2">
