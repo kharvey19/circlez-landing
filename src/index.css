@@ -1,13 +1,143 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@200&family=Hind+Madurai:wght@300&family=Inter:wght@300&family=Roboto:wght@700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * {
+  background-color: #111111;
+  
+}
+ */
+
+.geo {
+  font-family: 'Geologica', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.rob {
+  font-family: 'Roboto', sans-serif;
+}
+
+.inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.b {
+  border-bottom: 1px solid #485265;
+}
+
+.bt {
+  border-top: 1px solid #485265;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-right: 10px;
+}
+
+
+.background {
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.border {
+  border: 1px solid #495057;
+}
+
+/* .links:hover {
+  color: blue;
+} */
+
+
+.navbar.opaque {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Add this class to the header when scrolling */
+.header-scroll {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.contact-container {
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: center;
+  /* background-color: #0a1128; */
+  /* height: 100vh; */
+}
+
+.contact-form {
+  width: 100%;
+  padding: 40px;
+  /* background-color: #fff; */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  /* margin-bottom: 20px; */
+  color: #fff;
+  /* font-size: 24px; */
+  font-weight: 600;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  color: #fff;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 6px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #222;
+}
+
+.h {
+  height: 500px;
 }
