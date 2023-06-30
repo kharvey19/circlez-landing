@@ -8,7 +8,6 @@ import Contact from './components/Contact';
 import Blog from './components/Blog';
 import logo from './static/logo.png';
 import burger from './static/burg.png';
-import { set } from 'date-fns';
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
