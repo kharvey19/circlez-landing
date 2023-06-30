@@ -11,7 +11,7 @@ const Home = () => {
             <p className="ml-12 text-white text-center lg:text-left lg:mt-24 text-3xl md:text-4xl font-bold">A social media app startup harnessing the power of positive peer pressure to help young adults track and achieve goals.</p>
             <p className="ml-12 text-zinc-500 text-center lg:text-left text-2xl mt-5">Join our first 100 user list to get premium access to Circlez when it launches.</p>
             <div className='ml-12 flex justify-center lg:justify-start flex-col md:flex-row items-center'>
-  <input className="border-2 mt-10 rounded-md p-3 pl-10 pr-10 bg-black text-white border-blue-400 font-bold md:mr-5 md:inter" placeholder="Email Address" />
+  <input className="border-2 mt-10 rounded-md p-3 pl-10 pr-10 text-sm  bg-black text-white border-blue-400 font-bold md:mr-5 md:inter" placeholder="Email Address" />
   <button className="hover:cursor-pointer mt-5 md:mt-10 border-2 rounded-md p-3 pl-10 pr-10 bg-blue-400 text-sm text-white border-blue-400 hover:bg-black hover:text-blue-400 font-bold md:inter">Join the Mailing List</button>
 </div>
 
