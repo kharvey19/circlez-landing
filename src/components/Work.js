@@ -10,7 +10,7 @@ const Work = () => {
                         <img src={goals} alt='' className="lg:ml-44 w-9/12 mt-8" />
                     </div>
                     
-                    <div className="md:pr-44 md:pl-44 pl-16 pr-10 md:col-span-2">
+                    <div className="md:pr-44 md:pl-44 pl-16 pr-10 md:col-span-2 lg:mt-10">
                         <div className="rounded-lg mb-10 ">
                             <p className="text-2xl pt-8 mb-2 md:inter text-left font-bold"> Academics<span className="text-blue-400">.</span> </p>
                             <p className="text-sm pr-5 md:inter text-left text-zinc-400"> We hope to boost classroom productivity and by working hand-in-hand with teachers and educators. The teacher can focus on establishing relationships with students and educating, while we focus on motivating and creating a positive goal-oriented mindset.</p>
