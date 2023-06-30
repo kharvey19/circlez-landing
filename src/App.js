@@ -76,8 +76,8 @@ function App() {
       <header className={`navbar pl-10 bg-black text-white md:mr-10 fixed top-0 w-screen b ${showShadow ? 'opaque' : ''}`}>
         <div className="flex justify-between items-center w-screen">
           <div className="flex items-center">
-            <img src={logo} className="w-14 mr-4" alt="logo" />
-            <h1 className="text-lg md:text-3xl font-bold"> Circlez </h1>
+            <img src={logo} className="w-14 mr-2" alt="logo" />
+            <h1 className="text-lg md:text-3xl font-bold"> CIRCLEZ </h1>
           </div>
 
           <div className="flex justify-end">
@@ -92,10 +92,10 @@ function App() {
               </div>
             ) : (
               <div className="ml-5 mr-10">
-                <ul className="nav-links flex space-x-4 justify-end">
+                <ul className="nav-links flex space-x-6 justify-end">
                   <li>
                     <Link
-                      className="hover:text-blue-400 text-sm md:text-md hover:cursor-pointer"
+                      className="hover:text-blue-400 text-md md:text-lg hover:cursor-pointer"
                       to="home"
                       smooth={true}
                       offset={-50}
@@ -107,7 +107,7 @@ function App() {
                   </li>
                   <li>
                     <Link
-                      className="hover:text-blue-400 text-sm md:text-md hover:cursor-pointer"
+                      className="hover:text-blue-400 text-md md:text-lg hover:cursor-pointer"
                       to="about"
                       smooth={true}
                       offset={-50}
@@ -119,7 +119,7 @@ function App() {
                   </li>
                   <li>
                     <Link
-                      className="hover:text-blue-400 text-sm md:text-md hover:cursor-pointer"
+                      className="hover:text-blue-400 text-md md:text-lg hover:cursor-pointer"
                       to="work"
                       smooth={true}
                       offset={-50}
@@ -131,7 +131,7 @@ function App() {
                   </li>
                   <li>
                     <Link
-                      className="hover:text-blue-400 text-sm md:text-md hover:cursor-pointer"
+                      className="hover:text-blue-400 text-md md:text-lg hover:cursor-pointer"
                       to="team"
                       smooth={true}
                       offset={-50}
@@ -143,7 +143,7 @@ function App() {
                   </li>
                   <li>
                     <Link
-                      className="hover:text-blue-400 text-sm md:text-md hover:cursor-pointer"
+                      className="hover:text-blue-400 text-md md:text-lg hover:cursor-pointer"
                       to="contact"
                       smooth={true}
                       offset={-50}
@@ -155,7 +155,7 @@ function App() {
                   </li>
                   <li>
                     <Link
-                      className="hover:text-blue-400 text-sm md:text-md hover:cursor-pointer"
+                      className="hover:text-blue-400 text-md md:text-lg hover:cursor-pointer"
                       to="blog"
                       smooth={true}
                       offset={-50}
