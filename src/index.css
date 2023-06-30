@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* * {
   background-color: #111111;
   
@@ -140,4 +141,15 @@
 
 .h {
   height: 500px;
+}
+
+.input {
+border: none;
+outline: none;
+border-bottom: 1px solid #000;
+color: black;
+margin: 10px;
+margin-top: 20px;
+
+
 }
