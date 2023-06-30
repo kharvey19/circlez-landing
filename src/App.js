@@ -8,11 +8,14 @@ import Contact from './components/Contact';
 import Blog from './components/Blog';
 import logo from './static/logo.png';
 import burger from './static/burg.png';
+import { set } from 'date-fns';
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [showShadow, setShowShadow] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [showBlog, setBlog] = useState(false);
+
 
   const handleScroll = () => {
     const isHomePage = window.scrollY === 0;
@@ -28,8 +31,20 @@ function App() {
     }
   };
 
+  // const scrollToTop = () => {
+  //   scroll.scrollToTop();
+  // };
+
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
+  };
+
+  const openBlog = () => {
+    setBlog(true);
+  };
+
+  const closeBlog = () => {
+    setBlog(false);
   };
 
   useEffect(() => {
@@ -86,6 +101,7 @@ function App() {
                       smooth={true}
                       offset={-50}
                       duration={500}
+                      onClick={closeBlog}
                     >
                       Home
                     </Link>
@@ -97,6 +113,7 @@ function App() {
                       smooth={true}
                       offset={-50}
                       duration={500}
+                      onClick={closeBlog}
                     >
                       About
                     </Link>
@@ -108,6 +125,7 @@ function App() {
                       smooth={true}
                       offset={-50}
                       duration={500}
+                      onClick={closeBlog}
                     >
                       Work
                     </Link>
@@ -119,6 +137,7 @@ function App() {
                       smooth={true}
                       offset={-50}
                       duration={500}
+                      onClick={closeBlog}
                     >
                       Team
                     </Link>
@@ -130,6 +149,7 @@ function App() {
                       smooth={true}
                       offset={-50}
                       duration={500}
+                      onClick={closeBlog}
                     >
                       Contact
                     </Link>
@@ -141,6 +161,7 @@ function App() {
                       smooth={true}
                       offset={-50}
                       duration={500}
+                      onClick={openBlog}
                     >
                       Blog
                     </Link>
@@ -161,7 +182,10 @@ function App() {
                   smooth={true}
                   offset={-50}
                   duration={500}
-                  onClick={toggleMenu}
+                  onClick={() => {
+                    toggleMenu();
+                    closeBlog();
+                  }}
                 >
                   Home
                 </Link>
@@ -173,7 +197,10 @@ function App() {
                   smooth={true}
                   offset={-50}
                   duration={500}
-                  onClick={toggleMenu}
+                  onClick={() => {
+                    toggleMenu();
+                    closeBlog();
+                  }}
                 >
                   About
                 </Link>
@@ -185,7 +212,10 @@ function App() {
                   smooth={true}
                   offset={-50}
                   duration={500}
-                  onClick={toggleMenu}
+                  onClick={() => {
+                    toggleMenu();
+                    closeBlog();
+                  }}
                 >
                   Work
                 </Link>
@@ -197,7 +227,10 @@ function App() {
                   smooth={true}
                   offset={-50}
                   duration={500}
-                  onClick={toggleMenu}
+                  onClick={() => {
+                    toggleMenu();
+                    closeBlog();
+                  }}
                 >
                   Team
                 </Link>
@@ -209,7 +242,10 @@ function App() {
                   smooth={true}
                   offset={-50}
                   duration={500}
-                  onClick={toggleMenu}
+                  onClick={() => {
+                    toggleMenu();
+                    closeBlog();
+                  }}
                 >
                   Contact
                 </Link>
@@ -221,7 +257,10 @@ function App() {
                   smooth={true}
                   offset={-50}
                   duration={500}
-                  onClick={toggleMenu}
+                  onClick={() => {
+                    toggleMenu();
+                    openBlog();
+                  }}
                 >
                   Blog
                 </Link>
@@ -232,6 +271,13 @@ function App() {
       </header>
 
       <main>
+
+      {showBlog ? (
+    <Element name="blog" className="section">
+      <Blog />
+    </Element>
+  ) : 
+        <div>
         <Element name="home" className="section">
           <Home />
         </Element>
@@ -247,6 +293,10 @@ function App() {
         <Element name="contact" className="section">
           <Contact />
         </Element>
+
+        </div>
+   }
+        
       </main>
     </div>
   );

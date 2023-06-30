@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import home from '../static/home.PNG'
 import lift from '../static/lift.PNG'
 
