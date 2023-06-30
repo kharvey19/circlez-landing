@@ -21,6 +21,40 @@ const SignUp = (props) => {
     const getData = (e) => {
         const {firstName, lastName, Email, Password, ConfirmPassword} = user;
         e.preventDefault();
+
+        if (!user.firstName || !user.lastName || !user.Email || !user.Password || !user.ConfirmPassword) {
+            alert('Please fill in all required fields.');
+            return;
+          }
+
+          if (firstName.length < 2) {
+            alert('Input a valid first name.');
+            return;
+          }
+
+          if (lastName.length < 2) {
+            alert('Input a valid last name.');
+            return;
+          }
+
+          if (Email.length < 6) {
+            alert('Input a valid email.');
+            return;
+          }
+        
+        
+
+          if (Password.length < 8) {
+            alert('Password must be at least 8 characters long.');
+            return;
+          }
+        
+          // Check if Password and ConfirmPassword match
+          if (user.Password !== user.ConfirmPassword) {
+            alert('Password and Confirm Password do not match.');
+            return;
+          }
+
         const options = {
             method: 'POST',
             headers: {
@@ -83,17 +117,18 @@ const SignUp = (props) => {
             onChange={data} 
         />
         <input 
-            type='text'
+            type='password'
             name='Password'
             className="input col-span-2" placeholder="Password"
             value={user.Password}
             autoCapitalize="off"
             autoComplete='off'
+            minLength={8}
             required
             onChange={data} 
         />
         <input 
-            type='text'
+            type='password'
             name='ConfirmPassword'
             className="input col-span-2" placeholder="Confirm Password"
             value={user.ConfirmPassword}
