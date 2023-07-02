@@ -29,4 +29,4 @@ const db = getDatabase(app);
 
 
 
-export { firebase };
+export { firebase, db };

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 const Login = (props) => {
   const handleCloseLogin = props.handleCloseLogin;
+  const handleLoginStatus = props.handleLoginStatus;
+
   const [user, setUser] = useState({
     Email: '',
     Password: '',
@@ -14,23 +16,23 @@ const Login = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     const { Email, Password } = user;
-
+  
     if (!Email || !Password) {
       alert('Please fill in all required fields.');
       return;
     }
-
+  
     if (Password.length < 8) {
       alert('Password must be at least 8 characters long.');
       return;
     }
-
+  
     try {
       // Check if the user exists in the "Blog-Verified" table
       const response = await fetch(
-        `https://circlez-8e1cb-default-rtdb.firebaseio.com/Blog-Register.json`,
+        `https://circlez-8e1cb-default-rtdb.firebaseio.com/Blog-Verified.json`,
         {
           method: 'GET',
           headers: {
@@ -38,13 +40,15 @@ const Login = (props) => {
           },
         }
       );
-
+  
       const data = await response.json();
-
-      if (response.ok && data && Object.keys(data).length > 0) {
+  
+      if (response.ok && data && Object.values(data).some((item) => item.Email === Email)) {
         // User exists in the "Blog-Verified" table
         alert('Login successful!');
         handleCloseLogin();
+        handleLoginStatus(true);
+
       } else {
         // User does not exist in the "Blog-Verified" table
         alert('Invalid email or password. Please try again.');
@@ -54,6 +58,8 @@ const Login = (props) => {
       alert('Sorry, something went wrong. Please try again.');
     }
   };
+  
+  
 
   return (
     <>
