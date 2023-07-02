@@ -109,7 +109,8 @@ const Blog = () => {
                   <button
                     onClick={() => 
                     {handleLoginStatus(false, null, null, null); 
-                    setOpen(false);}}
+                    setOpen(false);
+                    handleTabChange('all');}}
                     className="bg-red-400 text-sm rounded-md p-2 pl-4 pr-4 ml-2"
                   >
                     Logout
