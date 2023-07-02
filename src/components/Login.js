@@ -1,4 +1,3 @@
-import { fi } from 'date-fns/locale';
 import React, { useState } from 'react';
 
 const Login = (props) => {
@@ -10,6 +9,7 @@ const Login = (props) => {
     lastName: '',
     Email: '',
     Password: '',
+    id: '',
   });
 
   const handleChange = (e) => {
@@ -20,7 +20,7 @@ const Login = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-    const {firstName, lastName, Email, Password } = user;
+    const {Email, Password} = user;
   
     if (!Email || !Password) {
       alert('Please fill in all required fields.');
@@ -49,10 +49,10 @@ const Login = (props) => {
       if (response.ok && data && Object.values(data).some((item) => item.Email === Email)) {
         // User exists in the "Blog-Verified" table
         alert('Login successful!');
-        console.log(firstName);
+        const loggedInUser = Object.values(data).find((item) => item.Email === Email);
+        const { firstName, lastName, id } = loggedInUser;
         handleCloseLogin();
-        // fix this
-        handleLoginStatus(true, firstName, lastName);
+        handleLoginStatus(true, firstName, lastName, id);
 
       } else {
         // User does not exist in the "Blog-Verified" table

@@ -4,10 +4,15 @@ import React, { useState } from 'react';
 
 const CreateBlog = (props) => {
     const handleTabChange = props.handleTabChange;
+    const userId = props.userId;
+    const userFirst = props.userFirst;
+    const userLast = props.userLast;
 
         
     const [user, setUser] = useState({
-        // Author: '',
+        AuthorId: userId,
+        userFirst: userFirst,
+        userLast: userLast,
         Title: '',
         Description: '',
         Message: '',
@@ -21,7 +26,7 @@ const CreateBlog = (props) => {
       }
   
       const getData = (e) => {
-          const { Title, Description, Message} = user;
+          const {AuthorId, userFirst, userLast, Title, Description, Message} = user;
           e.preventDefault();
 
           if (!user.Title || !user.Description || !user.Message ) {
@@ -35,7 +40,7 @@ const CreateBlog = (props) => {
                   'Content-Type': 'application/json',
               },
               body: JSON.stringify({
-                   Title, Description, Message
+                AuthorId, userFirst, userLast, Title, Description, Message
               })
           }
           const res = fetch(

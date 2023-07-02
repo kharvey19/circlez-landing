@@ -24,7 +24,7 @@ const style = {
 // collect the date and the user id and name, so the user can see their own posts + first and last name go on the card 
 // maybe a user can save blogs 
 
-const Blog = () => {
+const Blog = (props) => {
     const [openSignUp, setOpenSignUp] = useState(false);
     const handleOpenSignUp = () => setOpenSignUp(true);
     const handleCloseSignUp = () => setOpenSignUp(false);
@@ -36,6 +36,7 @@ const Blog = () => {
     const [activeTab, setActiveTab] = useState('all');
     const [userFirst, setUserFirst] = useState(null);
     const [userLast, setUserLast] = useState(null);
+    const [userId, setUserId] = useState(null);
 
 
 
@@ -55,10 +56,16 @@ const Blog = () => {
     }, []);
 
 
-    const handleLoginStatus = (status, userFirst, userLast) => {
+    const handleLoginStatus = (status, userFirst, userLast, userId) => {
         setIsLoggedIn(status);
         setUserFirst(userFirst);
         setUserLast(userLast);
+        setUserId(userId);
+
+        console.log(`User logged in: ${isLoggedIn}`);
+        console.log(`First Name: ${userFirst}`);
+        console.log(`Last Name: ${userLast}`);
+        console.log(`User ID: ${userId}`);
       };
 
       const handleTabChange = (tab) => {
@@ -88,13 +95,16 @@ const Blog = () => {
             )}
             {isLoggedIn && (
               <>
-              <p className='text-white'> {userFirst} {userLast} </p>
+              <div className="flex justify-end items-center">
+              <p className='text-white font-bold mr-3'> {userFirst} {userLast} </p>
                 <button
-                  onClick={() => handleLoginStatus(false)}
+                  onClick={() => 
+                  handleLoginStatus(false, null, null, null)}
                   className="bg-red-400 text-sm rounded-md p-2 pl-4 pr-4 ml-2"
                 >
                   Logout
                 </button>
+                </div>
               </>
             )}
           </div>
@@ -148,7 +158,7 @@ const Blog = () => {
                         >
                         <h1 className=" text-2xl font-bold md:inter mt-10 mx-7 border-b pb-3">{user.Title}</h1>
                         <p className="mx-7 mt-5 mb-5 hover:text-indigo-400">{user.Description}</p>
-                        <p className="mx-7 mt-5 mb-10 font-bold">John Smith</p>
+                        <p className="mx-7 mt-5 mb-10 font-bold">{user.userFirst} {user.userLast}</p>
                         </div>
                     );
                     }
@@ -160,24 +170,28 @@ const Blog = () => {
 
   
         {activeTab === 'my' && (
-          <div className="flex justify-center mt-8">
+            <div className="md: grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 ml-10 mr-10 pb-20">
             {users.length === 0 ? (
               <p>Loading...</p>
             ) : (
               users
-                .filter((user) => user.userId === 'currentUserId') // Replace 'currentUserId' with the actual ID of the logged-in user
+                .filter((user) => user.AuthorId === userId) // Replace 'currentUserId' with the actual ID of the logged-in user
                 .map((user) => {
                   if (user.Title && user.Description) {
                     return (
-                      <div
+                        <div
                         key={user.id}
-                        className="w-2/3 hover:text-indigo-400 text-left"
+                        className="text-left rounded-lg bg-white text-black shadow-white"
                         style={{ border: '1px solid white' }}
-                      >
-                        <h1 className="text-4xl font-bold md:inter mt-10 ml-10">{user.Title}</h1>
-                        <p className="ml-10 mt-5 mb-5">{user.Description}</p>
-                        <p className="ml-10 mt-5 mb-10">FirstName LastName</p>
-                      </div>
+                        >
+                        <h1 className=" text-2xl font-bold md:inter mt-10 mx-7 border-b pb-3">{user.Title}</h1>
+                        <p className="mx-7 mt-5 mb-5 hover:text-indigo-400">{user.Description}</p>
+                        <p className="mx-7 mt-5 mb-5 font-bold">{userFirst} {userLast}</p>
+                        <div className='mt-5 mb-5 mr-3 flex justify-center'>
+                        <button className='bg-zinc-500 hover:bg-zinc-600 text-white py-2 px-4 rounded text-sm mr-3'> Archive </button>
+                        <button className='bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded text-sm'> Delete </button>
+                        </div>
+                        </div>
                     );
                   }
                   return null;
@@ -188,7 +202,7 @@ const Blog = () => {
   
         {activeTab === 'upload' && 
             <div className='flex justify-center mt-10'>
-                <CreateBlog handleTabChange={handleTabChange} />
+                <CreateBlog handleTabChange={handleTabChange} userId={userId} userFirst={userFirst} userLast={userLast}/>
 
             </div>}
   
