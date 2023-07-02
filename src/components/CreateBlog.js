@@ -53,11 +53,11 @@ const CreateBlog = (props) => {
 
 
     return (
-        <div className="bg-zinc-100 p-8 w-2/3 rounded-lg">
+        <div className="bg-zinc-100 p-8 w-3/4 md:w-2/3 rounded-lg">
             <h2 className='text-black ml font-bold text-2xl'>Add a New Blog</h2>
             <div className='flex flex-col mt-5'>
             <input
-                className="ml-5 mr-10 text-black mb-5 border-zinc-900 rounded-md p-3" 
+                className="md:ml-5 md:mr-10 text-black mb-5 border-zinc-900 rounded-md p-3" 
                 style={{outline: 'none'}}
                 type="text"
                 name="Title"
@@ -69,7 +69,7 @@ const CreateBlog = (props) => {
                 required 
                 />
             <input
-                className="ml-5 mr-10 text-black mb-5 border-zinc-900 rounded-md p-3"
+                className="md:ml-5 md:mr-10 text-black mb-5 border-zinc-900 rounded-md p-3"
                 style={{outline: 'none'}} 
                 type="text"
                 name="Description"
@@ -82,7 +82,7 @@ const CreateBlog = (props) => {
                 />
             <textarea
                 required
-                className="ml-5 mr-10 text-black rounded-md p-3"
+                className="md:ml-5 md:mr-10 text-black rounded-md p-3"
                 style={{outline: 'none'}} 
                 name="Message"
                 placeholder="Blog Body"

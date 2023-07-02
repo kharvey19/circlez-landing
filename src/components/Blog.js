@@ -34,6 +34,8 @@ const Blog = () => {
     const [users, setUsers] = useState([]);
     const [isLoggedIn, setIsLoggedIn] = useState(false); // New state variable
     const [activeTab, setActiveTab] = useState('all');
+    const [userFirst, setUserFirst] = useState(null);
+    const [userLast, setUserLast] = useState(null);
 
 
 
@@ -53,8 +55,10 @@ const Blog = () => {
     }, []);
 
 
-    const handleLoginStatus = (status) => {
+    const handleLoginStatus = (status, userFirst, userLast) => {
         setIsLoggedIn(status);
+        setUserFirst(userFirst);
+        setUserLast(userLast);
       };
 
       const handleTabChange = (tab) => {
@@ -84,6 +88,7 @@ const Blog = () => {
             )}
             {isLoggedIn && (
               <>
+              <p className='text-white'> {userFirst} {userLast} </p>
                 <button
                   onClick={() => handleLoginStatus(false)}
                   className="bg-red-400 text-sm rounded-md p-2 pl-4 pr-4 ml-2"
