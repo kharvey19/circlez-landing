@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 
 
-const CreateBlog = () => {
+const CreateBlog = (props) => {
+    const handleTabChange = props.handleTabChange;
 
         
     const [user, setUser] = useState({
@@ -22,6 +23,12 @@ const CreateBlog = () => {
       const getData = (e) => {
           const { Title, Description, Message} = user;
           e.preventDefault();
+
+          if (!user.Title || !user.Description || !user.Message ) {
+            alert('Please fill in all required fields.');
+            return;
+          }
+
           const options = {
               method: 'POST',
               headers: {
@@ -37,6 +44,7 @@ const CreateBlog = () => {
           )
           if (res) {
               alert('Thank you for posting a blog!')
+              handleTabChange('all');
           } else {
               alert('Sorry, something went wrong. Please try again.')
           }
@@ -45,11 +53,12 @@ const CreateBlog = () => {
 
 
     return (
-        <div className="bg-zinc-100 p-4 w-1/3 ">
-            <h2 className='text-black ml'>Add a New Blog</h2>
+        <div className="bg-zinc-100 p-8 w-2/3 rounded-lg">
+            <h2 className='text-black ml font-bold text-2xl'>Add a New Blog</h2>
             <div className='flex flex-col mt-5'>
             <input
-                className="ml-5 mr-10 text-black mb-5 border-zinc-900" 
+                className="ml-5 mr-10 text-black mb-5 border-zinc-900 rounded-md p-3" 
+                style={{outline: 'none'}}
                 type="text"
                 name="Title"
                 placeholder="Blog Title"
@@ -60,7 +69,8 @@ const CreateBlog = () => {
                 required 
                 />
             <input
-                className="ml-5 mr-10 text-black mb-5 border-zinc-900" 
+                className="ml-5 mr-10 text-black mb-5 border-zinc-900 rounded-md p-3"
+                style={{outline: 'none'}} 
                 type="text"
                 name="Description"
                 placeholder="Short Description"
@@ -72,7 +82,8 @@ const CreateBlog = () => {
                 />
             <textarea
                 required
-                className="ml-5 mr-10 text-black" 
+                className="ml-5 mr-10 text-black rounded-md p-3"
+                style={{outline: 'none'}} 
                 name="Message"
                 placeholder="Blog Body"
                 value={user.Message}
@@ -80,9 +91,9 @@ const CreateBlog = () => {
             ></textarea>
 
             </div>
-
-            <button onClick={getData} className="mr-10 ml-5 mt-5 hover:cursor-pointer text-black hover:text-indigo-400 " type="submit">Post</button>
-
+            <div className='flex justify-end'>
+            <button onClick={getData} className="mr-10 mt-5 hover:cursor-pointer text-white hover:bg-blue-500 p-3 pl-5 pr-5 bg-blue-400 rounded-lg text-sm font-bold  " type="submit">Post</button>
+            </div>
         </div>
 
     );
