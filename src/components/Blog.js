@@ -168,12 +168,12 @@ const Blog = () => {
                         return (
                           <div
                             key={user.id}
-                            className="text-left rounded-lg bg-white text-black shadow-white mb-10"
+                            className="text-left rounded-lg bg-white text-black shadow-white mb-10 lg:mb-5 hover:bg-gray-200"
                             style={{ border: '1px solid white' }}
                             onClick={() => {setOpen(true); openPost(user.Title, user.Message, user.userFirst, user.userLast)}}
                           >
                             <h1 className="text-2xl font-bold md:inter mt-10 mx-7 border-b pb-3">{user.Title}</h1>
-                            <p className="mx-7 mt-5 mb-5 hover:text-indigo-400">{user.Description}</p>
+                            <p className="mx-7 mt-5 mb-5 ">{user.Description}</p>
                             <p className="mx-7 mt-5 mb-10 font-bold">
                               {user.userFirst} {user.userLast}
                             </p>
@@ -198,11 +198,11 @@ const Blog = () => {
                           return (
                             <div
                               key={user.id}
-                              className="text-left rounded-lg bg-white text-black shadow-white mb-10"
+                              className="text-left rounded-lg bg-white text-black shadow-white mb-10 lg:mb-5 hover:bg-gray-200"
                               style={{ border: '1px solid white' }}
                             >
                               <h1 className="text-2xl font-bold md:inter mt-10 mx-7 border-b pb-3">{user.Title}</h1>
-                              <p className="mx-7 mt-5 mb-5 hover:text-indigo-400">{user.Description}</p>
+                              <p className="mx-7 mt-5 mb-5">{user.Description}</p>
                               <p className="mx-7 mt-5 mb-5 font-bold">
                                 {userFirst} {userLast}
                               </p>
