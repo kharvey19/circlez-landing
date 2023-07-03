@@ -209,12 +209,12 @@ const Blog = () => {
                                 {userFirst} {userLast}
                               </p>
                               <div className="mt-5 mb-5 mr-3 flex justify-center">
-                                <button className="bg-zinc-500 hover:bg-zinc-600 text-white py-2 px-4 rounded text-sm mr-3">
+                                {/* <button className="bg-zinc-500 hover:bg-zinc-600 text-white py-2 px-4 rounded text-sm mr-3">
                                   Archive
                                 </button>
                                 <button className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded text-sm">
                                   Delete
-                                </button>
+                                </button> */}
                               </div>
                             </div>
                           );
