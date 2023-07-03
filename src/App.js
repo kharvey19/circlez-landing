@@ -75,10 +75,20 @@ function App() {
     <div className="App" onClick={handleMenuClose}>
       <header className={`navbar pl-10 bg-black text-white md:mr-10 fixed top-0 w-screen b ${showShadow ? 'opaque' : ''}`}>
         <div className="flex justify-between items-center w-screen">
+        <Link
+                      className=" hover:cursor-pointer"
+                      to="home"
+                      smooth={true}
+                      offset={-50}
+                      duration={500}
+                      onClick={closeBlog}
+                    >
+                      
           <div className="flex items-center">
             <img src={logo} className="w-14 mr-2" alt="logo" />
             <h1 className="text-lg md:text-3xl font-bold"> CIRCLEZ </h1>
           </div>
+          </Link>
 
           <div className="flex justify-end">
             {isMobile ? (
