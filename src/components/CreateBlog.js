@@ -8,9 +8,16 @@ const CreateBlog = (props) => {
     const userFirst = props.userFirst;
     const userLast = props.userLast;
 
+    const generateUniqueBlogId = () => {
+        const authorId = userId; // Assuming you have the author's ID available
+        const randomId = Math.random().toString(36).substring(2, 8); // Generate a random string
+    
+        return `${authorId}_${randomId}`; // Combine author ID and random string
+      };
+
         
     const [user, setUser] = useState({
-        AuthorId: userId,
+        AuthorId: generateUniqueBlogId(),
         userFirst: userFirst,
         userLast: userLast,
         Title: '',
