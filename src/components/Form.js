@@ -115,7 +115,7 @@ const Form = (props) => {
       )}
         </div>
 
-        <button onClick={getData} className="hover:cursor-pointer mt-2 rounded-md p-3 pr-10 text-sm text-black   hover:text-blue-400 font-bold md:inter">Submit</button>
+        <button onClick={getData} className="hover:cursor-pointer mt-5 ml-2 border-2 rounded-md p-2 pl-6 pr-6 bg-indigo-400	 text-sm text-white border-indigo-400 hover:bg-white hover:text-indigo-400 font-bold md:inter">Submit</button>
 
   </form>
   </div>
