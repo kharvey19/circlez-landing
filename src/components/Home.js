@@ -13,6 +13,7 @@ const style = {
   width: 400,
   bgcolor: 'white',
   border: '1px solid #fff',
+  borderRadius: '10px',
   boxShadow: 24,
   p: 4,
   color: 'black'
@@ -38,7 +39,7 @@ const Home = () => {
             <p className="ml-12 text-white text-center lg:text-left lg:mt-24 text-3xl md:text-4xl font-bold">A social media app startup harnessing the power of positive peer pressure to help young adults track and achieve goals.</p>
             <p className="ml-12 text-zinc-500 text-center lg:text-left text-2xl mt-5">The first 1000 users will have a chance to unlock a free premium account. Enter for your chance to win!</p>
             <div className='ml-12 flex justify-center items-center'>
-  <button onClick={handleOpen} className="hover:cursor-pointer mt-5 md:mt-7 border-2 rounded-md p-3 pl-10 pr-10 bg-blue-400 text-sm text-white border-blue-400 hover:bg-black hover:text-blue-400 font-bold md:inter">Enter Here</button>
+  <button onClick={handleOpen} className="hover:cursor-pointer mt-5 md:mt-7 border-2 rounded-md p-3 pl-10 pr-10 bg-indigo-400	 text-sm text-white border-indigo-400 hover:bg-black hover:text-indigo-400 font-bold md:inter">Sign Up for the Beta Here</button>
   <div>
 
   <Modal
