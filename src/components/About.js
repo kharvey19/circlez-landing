@@ -17,9 +17,11 @@ const About = () => {
           </p>
         </div>
         <div className="md:mr-20 pt-20 ">
-          <h1 className="text-5xl mb-6 font-bold text-white text-center md:text-right md:inter">Our Why</h1>
+          <h1 className="text-5xl mb-6 font-bold text-white text-center md:text-right md:inter">Founders' Story</h1>
           <p className="text-md text-white md:text-right md:inter text-zinc-500 ml-10 mr-10 md:mr-0">
-            Throughout high school, <span className="text-indigo-400 font-bold"> Sydney </span> and <span className="text-indigo-400 font-bold"> Aiden </span>  were blessed with the opportunity to receive help and encouragement from a close-knit friend group and loving parents. This propelled them to graduate at the top of their class and receive several scholarships to pursue higher education. However, they realize that not everyone has the same circumstances. The environment in which we grow up and interact with on a daily basis is crucial to personal development. <span className="text-indigo-400 font-bold"> They aim to create a stimulating environment where people can build support systems or enhance their existing ones. </span> This initiative aims to reduce barriers to achievement and growth - in classrooms, in athletics, and most importantly, in life.
+          Sydney and Aiden have been best friends since early middle school. From being tennis teammates, to graduating
+          top of their class, to getting admissions to all Ivy League schools and West Point, 
+          they decided to build a product that reflected the <span className="text-indigo-400 font-bold">accountability and motivation</span> they had with one another.
           </p>
 
         </div>
