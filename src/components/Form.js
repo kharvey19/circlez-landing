@@ -96,6 +96,9 @@ const Form = (props) => {
           <option value="">Select Role</option>
           <option value="student">Student</option>
           <option value="parent">Parent</option>
+          <option value="coach">Coach</option>
+          <option value="athlete">Athlete</option>
+          <option value="entrepreneur">Entrepreneur</option>
           <option value="other">Other</option>
         </select>
 
