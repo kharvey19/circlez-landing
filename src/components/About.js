@@ -23,7 +23,6 @@ const About = () => {
           top of their class, to getting admissions to all Ivy League schools and West Point, 
           they decided to build a product that reflected the <span className="text-indigo-400 font-bold">accountability and motivation</span> they had with one another.
           </p>
-
         </div>
 
         </div>

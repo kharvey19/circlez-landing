@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import home from '../static/home.PNG'
-import lift from '../static/lift.PNG'
+import home from '../static/Circlez_logo.png'
+import lift from '../static/Gym_Circle.png'
 import { Button, Modal, Box, Typography, TextField, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import { firebase } from './config.js';
 import Form from './Form.js';
