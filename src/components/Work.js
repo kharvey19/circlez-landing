@@ -1,11 +1,10 @@
 import NavBar from "./NavBar";
-import goals from "../static/goals.png";
+import goals from "../static/dual_image.png";
 const Work = () => {
     return ( 
         <div>
             <div className="bg-black min-h-screen text-white grid lg:grid-cols-4 b">
-                
-                <h1 className="text-5xl md:text-6xl text-center w-screen md:py-10 lg:col-span-4 lg:inter font-bold mt-32" >Our Work</h1>
+                <h1 className="text-5xl md:text-6xl text-center w-screen md:py-10 lg:col-span-4 lg:inter font-bold mt-10" >Our Work</h1>
                     <div className="col-span-2 mb-10 md:mb-20 flex justify-center" >
                         <img src={goals} alt='' className="lg:ml-44 mt-8" />
                     </div>

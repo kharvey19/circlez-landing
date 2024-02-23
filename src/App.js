@@ -292,9 +292,6 @@ function App() {
           <Home />
         </Element>
         <Element name="about" className="section">
-          <About />
-        </Element>
-        <Element name="corevalues" className="section">
           <CoreValues />
         </Element>
         <Element name="work" className="section">
