@@ -50,7 +50,7 @@ const Form = (props) => {
   return (
     <>
     <div>
-    <h1 className='text-xl md:inter font-bold '> Get Premium!</h1>
+    <h1 className='text-xl md:inter font-bold '> Sign Up Below!</h1>
     <form method='POST'>
         <div className='grid grid-cols-2'>
         <input 

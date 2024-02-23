@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Blog from './components/Blog';
 import logo from './static/logo.png';
 import burger from './static/burg.png';
+import CoreValues from './components/CoreValues';
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -292,6 +293,9 @@ function App() {
         </Element>
         <Element name="about" className="section">
           <About />
+        </Element>
+        <Element name="corevalues" className="section">
+          <CoreValues />
         </Element>
         <Element name="work" className="section">
           <Work />
