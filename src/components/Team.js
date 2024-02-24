@@ -16,7 +16,7 @@ const Team = () => {
               <img src={Sydney} alt="Sydney" className="rounded-lg mt-10 mb-10 w-2/3" />
               <p className="font-bold text-xl mb-4 text-whit bg-zinc-900 md:inter">Sydney Wiredu - Co-Founder</p>
               <p className="text-sm text-white bg-zinc-900 md:inter">
-                  Sydney is a rising sophomore at Harvard College double concentrating in Neuroscience and Economics on a pre-med track. He has a mind for innovation and seeks to inspire change in the next generation of future leaders. His entrepreneurial spirit stems from his firsthand experience dealing with outdated and inequitable systems. To him, Circlez is an initiative that levels the playing field by giving everyone, regardless of background or environment, an opportunity to challenge themselves and establish meaningful connections.
+                  Sydney is a sophomore at Harvard College double concentrating in Neuroscience and Economics on a pre-med track. He has a mind for innovation and seeks to inspire change in the next generation of future leaders. His entrepreneurial spirit stems from his firsthand experience dealing with outdated and inequitable systems. To him, Circlez is an initiative that levels the playing field by giving everyone, regardless of background or environment, an opportunity to challenge themselves and establish meaningful connections.
               </p>
           </div>
 
@@ -24,7 +24,7 @@ const Team = () => {
               <img src={Aiden} alt="Aiden" className="rounded-lg mb-4 w-1/2 mb-10" />
               <p className="font-bold text-xl mb-4 text-white bg-zinc-900 md:inter">Aiden Tahmazian - Co-Founder</p>
               <p className="text-sm text-white bg-zinc-900 md:inter">
-                  Aiden is a rising sophomore at Rowan University majoring in Mechanical Engineering with a minor in Mathematics. His entrepreneurial passion stems from his parents who came to America to build a new life for themselves. With a passion for design and service, he wanted to create a product that would not only help others but revolutionize an industry as well. To him, Circlez resembles the support system that he, Sydney, and their friends had in grade school, and he wants to share it with others. In his free time, Aiden enjoys reading, playing basketball, tennis, pickleball, and spending time with loved ones.
+                  Aiden is a sophomore at Rowan University majoring in Mechanical Engineering with a minor in Mathematics. His entrepreneurial passion stems from his parents who came to America to build a new life for themselves. With a passion for design and service, he wanted to create a product that would not only help others but revolutionize an industry as well. To him, Circlez resembles the support system that he, Sydney, and their friends had in grade school, and he wants to share it with others. In his free time, Aiden enjoys reading, playing basketball, tennis, pickleball, and spending time with loved ones.
               </p>
           </div>
           
