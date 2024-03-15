@@ -6,6 +6,7 @@ import Work from './components/Work';
 import Team from './components/Team';
 import Contact from './components/Contact';
 import Blog from './components/Blog';
+import Privacy from './components/Privacy';
 import logo from './static/logo.png';
 import burger from './static/burg.png';
 import CoreValues from './components/CoreValues';
@@ -15,7 +16,7 @@ function App() {
   const [showShadow, setShowShadow] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [showBlog, setBlog] = useState(false);
-
+  const [showPrivacy, setPrivacy] = useState(false);
 
   const handleScroll = () => {
     const isHomePage = window.scrollY === 0;
@@ -45,6 +46,14 @@ function App() {
 
   const closeBlog = () => {
     setBlog(false);
+  };
+
+  const openPrivacy = () => {
+    setPrivacy(true);
+  };
+
+  const closePrivacy = () => {
+    setPrivacy(false);
   };
 
   useEffect(() => {
@@ -98,7 +107,10 @@ function App() {
                   src={burger}
                   className="w-10 mr-4 cursor-pointer"
                   alt="menu-icon"
-                  onClick={toggleMenu}
+                  onClick={() => {
+                    closeBlog();
+                    closePrivacy();
+                  }}
                 />
               </div>
             ) : (
@@ -111,7 +123,10 @@ function App() {
                       smooth={true}
                       offset={-50}
                       duration={500}
-                      onClick={closeBlog}
+                      onClick={() => {
+                        closeBlog();
+                        closePrivacy();
+                      }}
                     >
                       Home
                     </Link>
@@ -123,7 +138,10 @@ function App() {
                       smooth={true}
                       offset={-50}
                       duration={500}
-                      onClick={closeBlog}
+                      onClick={() => {
+                        closeBlog();
+                        closePrivacy();
+                      }}
                     >
                       About
                     </Link>
@@ -135,7 +153,10 @@ function App() {
                       smooth={true}
                       offset={-50}
                       duration={500}
-                      onClick={closeBlog}
+                      onClick={() => {
+                        closeBlog();
+                        closePrivacy();
+                      }}
                     >
                       Work
                     </Link>
@@ -147,7 +168,10 @@ function App() {
                       smooth={true}
                       offset={-50}
                       duration={500}
-                      onClick={closeBlog}
+                      onClick={() => {
+                        closeBlog();
+                        closePrivacy();
+                      }}
                     >
                       Team
                     </Link>
@@ -159,7 +183,10 @@ function App() {
                       smooth={true}
                       offset={-50}
                       duration={500}
-                      onClick={closeBlog}
+                      onClick={() => {
+                        closeBlog();
+                        closePrivacy();
+                      }}
                     >
                       Contact
                     </Link>
@@ -171,10 +198,28 @@ function App() {
                       smooth={true}
                       offset={-50}
                       duration={500}
-                      onClick={openBlog}
+                      onClick={() => {
+                        openBlog();
+                        closePrivacy();
+                      }}
                     >
                       Blog
                     </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="hover:text-blue-400 text-md md:text-lg hover:cursor-pointer"
+                      to="privacy"
+                      smooth={true}
+                      offset={-50}
+                      duration={500}
+                      onClick={() => {
+                        openPrivacy();
+                        closeBlog();
+                      }}
+                      >
+                        Privacy Policy
+                      </Link>
                   </li>
                 </ul>
               </div>
@@ -195,6 +240,7 @@ function App() {
                   onClick={() => {
                     toggleMenu();
                     closeBlog();
+                    closePrivacy();
                   }}
                 >
                   Home
@@ -210,6 +256,7 @@ function App() {
                   onClick={() => {
                     toggleMenu();
                     closeBlog();
+                    closePrivacy();
                   }}
                 >
                   About
@@ -225,6 +272,7 @@ function App() {
                   onClick={() => {
                     toggleMenu();
                     closeBlog();
+                    closePrivacy();
                   }}
                 >
                   Work
@@ -240,6 +288,7 @@ function App() {
                   onClick={() => {
                     toggleMenu();
                     closeBlog();
+                    closePrivacy();
                   }}
                 >
                   Team
@@ -255,6 +304,7 @@ function App() {
                   onClick={() => {
                     toggleMenu();
                     closeBlog();
+                    closePrivacy();
                   }}
                 >
                   Contact
@@ -270,9 +320,26 @@ function App() {
                   onClick={() => {
                     toggleMenu();
                     openBlog();
+                    closePrivacy();
                   }}
                 >
                   Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="block px-4 py-2 hover:bg-blue-400 hover:text-black"
+                  to="privacy"
+                  smooth={true}
+                  offset={-50}
+                  duration={500}
+                  onClick={() => {
+                    toggleMenu();
+                    openPrivacy();
+                    closeBlog();
+                  }}
+                >
+                  Privacy Policy
                 </Link>
               </li>
             </ul>
@@ -286,7 +353,12 @@ function App() {
     <Element name="blog" className="section">
       <Blog />
     </Element>
-  ) : 
+  ) : showPrivacy ? (
+    <Element name="privacy" className="section">
+      <Privacy />
+    </Element>
+  ) : (
+
         <div>
         <Element name="home" className="section">
           <Home />
@@ -305,6 +377,7 @@ function App() {
         </Element>
 
         </div>
+  )
    }
         
       </main>
